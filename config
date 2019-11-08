@@ -1,0 +1,17 @@
+[bugzilla]
+url: https://bz.example.com/bugzilla
+user: username@example.com
+pass: username_password
+
+[csv]
+filename: export.csv
+format: %%d/%%m/%%Y %%H:%%M:%%S
+max_comment: 20
+max_attachment: 10
+advanced_attachment: True
+
+[jira]
+key: BZ
+def_type: BUG
+def_status: Closed
+def_user: admin

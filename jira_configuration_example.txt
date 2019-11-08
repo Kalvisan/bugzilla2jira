@@ -1,0 +1,84 @@
+{
+  "config.version" : "2.0",
+  "config.project.from.csv" : "false",
+  "config.encoding" : "UTF-8",
+  "config.email.suffix" : "@example.com",
+  "config.field.mappings" : {
+    "Status" : {
+      "jira.field" : "status"
+    },
+    "Assignee" : {
+      "jira.field" : "assignee"
+    },
+    "Category" : {
+      "jira.field" : "components"
+    },
+    "Description" : {
+      "jira.field" : "description"
+    },
+    "Issue type" : {
+      "jira.field" : "issuetype"
+    },
+    "OS" : {
+      "jira.field" : "versions"
+    },
+    "Priority" : {
+      "jira.field" : "priority"
+    },
+    "Comments" : {
+      "jira.field" : "comment"
+    },
+    "Reporter" : {
+      "jira.field" : "reporter"
+    },
+    "Label" : {
+      "jira.field" : "labels"
+    },
+    "Attachment" : {
+      "jira.field" : "attachment"
+    },
+    "Date Modified" : {
+      "jira.field" : "updated"
+    },
+    "Summary" : {
+      "jira.field" : "summary"
+    },
+    "Issue Id" : {
+      "jira.field" : "issue-id"
+    },
+    "Date Created" : {
+      "jira.field" : "created"
+    },
+    "Resolution" : {
+      "jira.field" : "resolution"
+    }
+  },
+  "config.value.mappings" : {
+    "Status" : {
+      "Closed" : "10001",
+      "In_progress" : "3",
+      "Open" : "10000"
+    },
+    "Issue type" : {
+      "BUG" : "10005"
+    },
+    "Resolution" : {
+      "DUPLICATE" : "10002",
+      "WORKSFORME" : "10102",
+      "WONTFIX" : "10001",
+      "FIXED" : "10000",
+      "INVALID" : "10100",
+      "SOFTWARE" : "10104"
+    }
+  },
+  "config.delimiter" : ",",
+  "config.project" : {
+    "project.type" : null,
+    "project.key" : "HW",
+    "project.description" : null,
+    "project.url" : null,
+    "project.name" : "Project Name",
+    "project.lead" : null
+  },
+  "config.date.format" : "dd/MM/yy HH:mm:ss"
+}
