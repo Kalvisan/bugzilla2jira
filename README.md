@@ -5,6 +5,7 @@ This simple script exports all bugzilla issues to one csv file. Jira got specifi
 1. First of all make sure you got [python 3](https://www.python.org/downloads/) installed.
 2. Download this repository to your local machine: `git clone https://github.com/Kalvisan/bugzilla2jira.git bz2jira` next go to folder `cd bz2jira`
 3. Install all needed python library `pip3 install -r requirements.txt`
+    1. Attention: I created this script while Bugsy wasn't released 0.11.1+ version to public in pip, so I installed newest version by `pip3 install git+https://github.com/AutomatedTester/Bugsy.git` 
 4. Now you can start editing config file as you need. `open local config example file` more info how to edit file below
 5. You are ready now to start exporting data from bugzilla to local csv file
 6. Basic export example: `python3 bz2csv.py -c config` a bit more advanced commands you can see below.

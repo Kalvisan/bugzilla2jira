@@ -138,8 +138,8 @@ def main(arguments):
         # Jira require you to fill other comment columns empty
         row = append_array(row, "", int(csv_max_comment) - len(comments))
 
-        # !!! This function wasn't in source code, so I made my own code fix for bugsy
-        attachments = bug.get_attachments()
+        # Bugsy just added attachment support, but there wasn't enough documentation, so I use raw data
+        attachments = bug.get_attachments().to_dict()
         if len(attachments) > max_attachments:
             max_attachments = len(attachments)
 
