@@ -46,3 +46,13 @@ You can map users like this:
 `jira_user=bugzilla_user`
 
 2. You can map your status in bugzilla with argument `-s status-mapping.cfg` or `--status-file status-mapping.cfg`. File parsing will be the same as user file parsing.
+
+## Known issues
+* In older versions of bugzilla, you can't login using header values, so jou need to pass params instead of headers. (This issue is more bugsy problem)
+
+## TO-DO List
+* Add external field mapping, from file, or other place
+* Add "Duplicate" or "Relate to" issue relation to jira
+* Add different issue types, now is only "bug"
+* Maybe add direct api import from bugzilla to jira, no need to generate csv file
+
