@@ -139,15 +139,16 @@ def main(arguments):
         row = append_array(row, "", int(csv_max_comment) - len(comments))
 
         # Bugsy just added attachment support, but there wasn't enough documentation, so I use raw data
-        attachments = bug.get_attachments().to_dict()
+        attachments = bug.get_attachments()
         if len(attachments) > max_attachments:
             max_attachments = len(attachments)
 
         # there is specific way jira handle attachments
         for attach in attachments:
+            attach = attach.to_dict()
             url = "%s/attachment.cgi?id=%s" % (bz_url, attach.get('id'))
             if bool(csv_advanced_attachment):
-                time = str(datetime.strptime(attach.get('creation_time')[:-1], '%Y-%m-%dT%H:%M:%S').strftime(csv_time_format))
+                time = str(attach.get('creation_time').strftime(csv_time_format))
                 row.append("%s;%s;%s;%s" % (time, map_users(attach.get('creator'), mapping_file=has_user_mapping, default=jira_default_user), attach.get('file_name'), url))
             else:
                 row.append(url)
